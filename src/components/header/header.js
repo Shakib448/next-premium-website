@@ -9,8 +9,15 @@ import menuItems from "./header.data";
 
 export default function Header({ className }) {
   return (
-    <header sx={style.header} className={className}>
-      Header
+    <header sx={style.header} className={className} id="header">
+      <Container sx={style.container}>
+        <Logo src={logoDark} />
+        <Flex as="nav" sx={style.nave}>
+          {menuItems.map((menuItem, i) => (
+            <Link></Link>
+          ))}
+        </Flex>
+      </Container>
     </header>
   );
 }
