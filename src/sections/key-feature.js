@@ -49,7 +49,7 @@ export default function KeyFeature() {
       <Container>
         <SectionHeader
           slogan="What's the production"
-          title="Meet the feature of our product"
+          title="Meet the feature product"
         />
         <Grid sx={styles.grid}>
           {data.map((item) => (
