@@ -45,10 +45,13 @@ const data = {
 };
 
 export default function ServiceSection() {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   const handleClick = (e) => {
     e.preventDefault();
     setVideoOpen(true);
   };
+
   return (
     <section sx={{ variant: "section.services" }}>
       <Container sx={styles.containerBox}>
@@ -86,6 +89,12 @@ export default function ServiceSection() {
           </Grid>
         </Box>
       </Container>
+      <ModalVideo
+        channel="youtube"
+        isOpen={videoOpen}
+        videoId="iGBERMGMIvc"
+        onClose={() => setVideoOpen(false)}
+      />
     </section>
   );
 }
