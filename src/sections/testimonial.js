@@ -121,6 +121,7 @@ export default function TestimonialCard() {
                     <Heading as="h4" sx={styles.heading}>
                       {item.name}
                     </Heading>
+                    <Text sx={styles.designation}>{item.designation}</Text>
                   </div>
                 </div>
               </Box>
