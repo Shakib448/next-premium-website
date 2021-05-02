@@ -1,5 +1,6 @@
 import React from "react";
 import { Flex, Box, IconButton } from "theme-ui";
+import { IoIosCheckmarkCircle, IoIosCloseCircle } from "react-icons/io";
 
 export default function List({ items = [], parentStyle, childStyle }) {
   return (
@@ -12,7 +13,7 @@ export default function List({ items = [], parentStyle, childStyle }) {
         ...parentStyle,
       }}
     >
-      {items.map((item, i) => {
+      {/* {items.map((item, i) => {
         <Flex
           className={item.isAvailable ? "open" : "closed"}
           as="li"
@@ -24,7 +25,31 @@ export default function List({ items = [], parentStyle, childStyle }) {
           </IconButton>
           {item.text}
         </Flex>;
-      })}
+      })} */}
+      <Flex className="open" as="li" sx={{ ...childStyle }}>
+        <IconButton sx={styles.listIcon} aria-label="list icon">
+          <IoIosCheckmarkCircle />
+        </IconButton>
+        Drag & Drop Builder
+      </Flex>
+      <Flex className="open" as="li" sx={{ ...childStyle }}>
+        <IconButton sx={styles.listIcon} aria-label="list icon">
+          <IoIosCheckmarkCircle />
+        </IconButton>
+        1,000's of Templates
+      </Flex>
+      <Flex className="open" as="li" sx={{ ...childStyle }}>
+        <IconButton sx={styles.listIcon} aria-label="list icon">
+          <IoIosCheckmarkCircle />
+        </IconButton>
+        Blog Support Tools
+      </Flex>
+      <Flex className="open" as="li" sx={{ ...childStyle }}>
+        <IconButton sx={styles.listIcon} aria-label="list icon">
+          <IoIosCheckmarkCircle />
+        </IconButton>
+        Drag & Drop Builder
+      </Flex>
     </Box>
   );
 }
